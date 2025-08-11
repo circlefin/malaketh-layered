@@ -39,7 +39,7 @@ alloy-rpc-types        = { version = "0.11.1", features = ["eth"], default-featu
 alloy-rpc-types-eth    = { version = "0.11.1", default-features = false }
 alloy-rpc-types-engine = { version = "0.11.1", features = ["ssz"], default-features = false }
 
-async-trait        = "0.1.85"
+async-trait        = "0.1.88"
 axum               = "0.7"
 bytes              = { version = "1", default-features = false }
 bytesize           = "1.3"
