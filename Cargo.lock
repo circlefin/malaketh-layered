@@ -4069,7 +4069,7 @@ dependencies = [
  "informalsystems-malachitebft-config",
  "informalsystems-malachitebft-core-types",
  "informalsystems-malachitebft-metrics",
- "itertools 0.13.0",
+ "itertools 0.14.0",
  "rand 0.8.5",
  "serde_json",
  "thiserror 2.0.12",

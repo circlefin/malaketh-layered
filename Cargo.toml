@@ -49,7 +49,7 @@ config             = { version = "0.14", features = ["toml"], default-features =
 derive-where       = "1.2.7"
 directories        = "5.0.1"
 hex                = { version = "0.4.3", features = ["serde"] }
-itertools          = "0.13"
+itertools          = "0.14"
 itf                = "0.2.3"
 prost              = "0.13"
 prost-build        = "0.13"
