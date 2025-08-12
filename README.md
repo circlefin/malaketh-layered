@@ -204,8 +204,8 @@ cargo run --bin malachitebft-eth-utils spam --time=60 --rate=1000
 
 ## Links
 
-- Malachite architecture [https://github.com/informalsystems/malachite/blob/13bca14cd209d985c3adf101a02924acde8723a5/ARCHITECTURE.md](https://github.com/informalsystems/malachite/blob/13bca14cd209d985c3adf101a02924acde8723a5/ARCHITECTURE.md)
-- Tutorial on Malachite’s Channel-based interface [https://github.com/informalsystems/malachite/blob/13bca14cd209d985c3adf101a02924acde8723a5/docs/tutorials/channels.md][channels]
+- Malachite architecture [https://github.com/circlefin/malachite/blob/13bca14cd209d985c3adf101a02924acde8723a5/ARCHITECTURE.md](https://github.com/circlefin/malachite/blob/13bca14cd209d985c3adf101a02924acde8723a5/ARCHITECTURE.md)
+- Tutorial on Malachite’s Channel-based interface [https://github.com/circlefin/malachite/blob/13bca14cd209d985c3adf101a02924acde8723a5/docs/tutorials/channels.md][channels]
 - The most flexible Consensus API in the world [https://informal.systems/blog/the-most-flexible-consensus-api-in-the-world][flexible]
 - Engine API [https://github.com/ethereum/execution-apis/tree/main/src/engine](https://github.com/ethereum/execution-apis/tree/main/src/engine)
 - Reth [https://github.com/paradigmxyz/reth](https://github.com/paradigmxyz/reth)
@@ -219,7 +219,7 @@ cargo run --bin malachitebft-eth-utils spam --time=60 --rate=1000
 
 ## License
 
-Copyright 2025 Informal Systems Inc
+Copyright 2025 Circle Internet Group, Inc. All rights reserved.
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
