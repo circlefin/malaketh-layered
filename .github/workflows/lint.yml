@@ -55,7 +55,7 @@ jobs:
         with:
           components: clippy
       - name: Run clippy
-        uses: auguwu/clippy-action@1.4.0
+        uses: step-security/clippy-action@v1.4.0
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
 
