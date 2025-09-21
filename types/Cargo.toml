@@ -29,7 +29,7 @@ sha3 = { workspace = true }
 signature = { workspace = true }
 
 alloy-consensus = { workspace = true }
-alloy-primitives = { version = "0.8.21", default-features = false }
+alloy-primitives = { version = "1.2.1", default-features = false }
 alloy-rpc-types-eth = { workspace = true }
 
 [build-dependencies]
