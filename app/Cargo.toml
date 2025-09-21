@@ -20,7 +20,7 @@ malachitebft-proto.workspace = true
 alloy-consensus = { workspace = true }
 alloy-rpc-types-eth = { workspace = true }
 alloy-rpc-types-engine = { workspace = true }
-ethereum_ssz = "0.8"
+ethereum_ssz = "0.9"
 
 hex.workspace = true
 async-trait.workspace = true
