@@ -31,31 +31,41 @@ jobs:
     name: Formatting
     runs-on: ubuntu-latest
     steps:
+      - name: Harden the runner (Audit all outbound calls)
+        uses: step-security/harden-runner@f4a75cfd619ee5ce8d5b864b0d183aff3c69b55a # v2.13.1
+        with:
+          egress-policy: audit
+
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@08eba0b27e820071cde6df949e0beb9ba4906955 # v4.3.0
       - name: Setup Rust toolchain
-        uses: actions-rust-lang/setup-rust-toolchain@v1
+        uses: actions-rust-lang/setup-rust-toolchain@1780873c7b576612439a134613cc4cc74ce5538c # v1.15.2
         with:
           components: rustfmt
       - name: Check formatting
-        uses: actions-rust-lang/rustfmt@v1
+        uses: actions-rust-lang/rustfmt@559aa3035a47390ba96088dffa783b5d26da9326 # v1.1.1
 
   clippy:
     name: Clippy
     runs-on: ubuntu-latest
     steps:
+      - name: Harden the runner (Audit all outbound calls)
+        uses: step-security/harden-runner@f4a75cfd619ee5ce8d5b864b0d183aff3c69b55a # v2.13.1
+        with:
+          egress-policy: audit
+
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@08eba0b27e820071cde6df949e0beb9ba4906955 # v4.3.0
       - name: Install Protoc
-        uses: step-security/setup-protoc@v3
+        uses: step-security/setup-protoc@f6eb248a6510dbb851209febc1bd7981604a52e3 # v3.0.0
         with:
           repo-token: ${{ secrets.GITHUB_TOKEN }}
       - name: Setup Rust toolchain
-        uses: actions-rust-lang/setup-rust-toolchain@v1
+        uses: actions-rust-lang/setup-rust-toolchain@1780873c7b576612439a134613cc4cc74ce5538c # v1.15.2
         with:
           components: clippy
       - name: Run clippy
-        uses: step-security/clippy-action@v1.4.0
+        uses: step-security/clippy-action@8f3d378bf6cc045b92fc71c623877b9e9e1232de # v1.4.0
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
 
@@ -65,9 +75,9 @@ jobs:
   #   env:
   #     RUSTDOCFLAGS: -Dwarnings
   #   steps:
-  #     - uses: actions/checkout@v4
+  #     - uses: actions/checkout@08eba0b27e820071cde6df949e0beb9ba4906955 # v4.3.0
   #     - name: Setup Rust toolchain
-  #       uses: actions-rust-lang/setup-rust-toolchain@v1
+  #       uses: actions-rust-lang/setup-rust-toolchain@1780873c7b576612439a134613cc4cc74ce5538c # v1.15.2
   #       with:
   #         # Run docs generation on nightly rather than stable. This enables features like
   #         # https://doc.rust-lang.org/beta/unstable-book/language-features/doc-cfg.html which allows an
