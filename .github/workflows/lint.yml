@@ -29,39 +29,39 @@ env:
 jobs:
   fmt:
     name: Formatting
-    runs-on: ubuntu-latest
+    runs-on: github-hosted-small
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5 # v4
       - name: Setup Rust toolchain
-        uses: actions-rust-lang/setup-rust-toolchain@v1
+        uses: actions-rust-lang/setup-rust-toolchain@1780873c7b576612439a134613cc4cc74ce5538c # v1
         with:
           components: rustfmt
       - name: Check formatting
-        uses: actions-rust-lang/rustfmt@v1
+        uses: actions-rust-lang/rustfmt@559aa3035a47390ba96088dffa783b5d26da9326 # v1
 
   clippy:
     name: Clippy
-    runs-on: ubuntu-latest
+    runs-on: github-hosted-small
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5 # v4
       - name: Install Protoc
-        uses: step-security/setup-protoc@v3
+        uses: step-security/setup-protoc@f6eb248a6510dbb851209febc1bd7981604a52e3 # v3
         with:
           repo-token: ${{ secrets.GITHUB_TOKEN }}
       - name: Setup Rust toolchain
-        uses: actions-rust-lang/setup-rust-toolchain@v1
+        uses: actions-rust-lang/setup-rust-toolchain@1780873c7b576612439a134613cc4cc74ce5538c # v1
         with:
           components: clippy
       - name: Run clippy
-        uses: step-security/clippy-action@v1.4.0
+        uses: step-security/clippy-action@8f3d378bf6cc045b92fc71c623877b9e9e1232de # v1.4.0
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
 
   # doc:
   #   name: Doc
-  #   runs-on: ubuntu-latest
+  #   runs-on: github-hosted-small
   #   env:
   #     RUSTDOCFLAGS: -Dwarnings
   #   steps:
